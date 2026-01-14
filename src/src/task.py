@@ -5,5 +5,6 @@ class Task:
         self.description = description
         self.status = status
 
-    def __str__(self):
-        return f"{self.task_id} - {self.title} ({self.status})"
+    def __repr__(self):
+        return (f"Task(id={self.task_id}, title='{self.title}', "
+                f"description='{self.description}', status='{self.status}')")
