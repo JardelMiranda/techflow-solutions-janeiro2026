@@ -34,4 +34,11 @@ class TaskManager:
 
     def list_tasks(self):
         return self.tasks
-    
+        
+    def delete_task(self, task_id):
+        for task in self.tasks:
+            if task.task_id == task_id:
+                self.tasks.remove(task)
+                return
+
+        raise ValueError(f"Tarefa com id {task_id} não encontrada")
